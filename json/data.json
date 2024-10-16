@@ -1,0 +1,144 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "Take The Risk",
+            "price": 19.99,
+            "rating": 9,
+            "image": "/images/book1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Eloquent JavaScript",
+            "price": 22.50,
+            "rating": 8,
+            "image": "/images/book2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "You Don't Know JS",
+            "price": 18.75,
+            "rating": 9,
+            "image": "/images/book3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "The Pragmatic Programmer",
+            "price": 29.99,
+            "rating": 10,
+            "image": "/images/book4.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Clean Code",
+            "price": 25.50,
+            "rating": 9,
+            "image": "/images/book1.jpg"
+        },
+        {
+            "id": 6,
+            "title": "JavaScript: The Definitive Guide",
+            "price": 39.99,
+            "rating": 9,
+            "image": "/images/book2.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Refactoring",
+            "price": 34.75,
+            "rating": 8,
+            "image": "/images/book3.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Effective JavaScript",
+            "price": 27.00,
+            "rating": 7,
+            "image": "/images/book4.jpg"
+        },
+        {
+            "id": 9,
+            "title": "JavaScript Patterns",
+            "price": 23.99,
+            "rating": 8,
+            "image": "/images/book1.jpg"
+        },
+        {
+            "id": 10,
+            "title": "Learning JavaScript Design Patterns",
+            "price": 31.49,
+            "rating": 9,
+            "image": "/images/book2.jpg"
+        },
+        {
+            "id": 11,
+            "title": "Pro JavaScript Techniques",
+            "price": 26.99,
+            "rating": 7,
+            "image": "/images/book3.jpg"
+        },
+        {
+            "id": 12,
+            "title": "Secrets of the JavaScript Ninja",
+            "price": 32.50,
+            "rating": 9,
+            "image": "/images/book4.jpg"
+        },
+        {
+            "id": 13,
+            "title": "Speaking JavaScript",
+            "price": 21.99,
+            "rating": 8,
+            "image": "/images/book1.jpg"
+        },
+        {
+            "id": 14,
+            "title": "Node.js Design Patterns",
+            "price": 35.75,
+            "rating": 9,
+            "image": "/images/book2.jpg"
+        },
+        {
+            "id": 15,
+            "title": "Understanding ECMAScript 6",
+            "price": 28.99,
+            "rating": 9,
+            "image": "/images/book3.jpg"
+        },
+        {
+            "id": 16,
+            "title": "Programming JavaScript Applications",
+            "price": 24.95,
+            "rating": 8,
+            "image": "/images/book4.jpg"
+        },
+        {
+            "id": 17,
+            "title": "Mastering JavaScript Functional Programming",
+            "price": 33.99,
+            "rating": 9,
+            "image": "/images/book1.jpg"
+        },
+        {
+            "id": 18,
+            "title": "JavaScript: The New Toys",
+            "price": 19.99,
+            "rating": 7,
+            "image": "/images/book2.jpg"
+        },
+        {
+            "id": 19,
+            "title": "JavaScript & JQuery: Interactive Front-End Web Development",
+            "price": 40.00,
+            "rating": 8,
+            "image": "/images/book3.jpg"
+        },
+        {
+            "id": 20,
+            "title": "Web Development with Node and Express",
+            "price": 29.95,
+            "rating": 8,
+            "image": "/images/book4.jpg"
+        }
+    ]
+}

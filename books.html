@@ -1,22 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="books.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Document</title>
 </head>
+
 <body>
+    <script type="module" src="books.js"></script>
     <nav class="topnav">
         <div class="title">
             <p>Bookshop ERP</p>
         </div>
         <div class="nav">
-            <a id="navLink"href="#newBook" >+ New book</a>
-            <a id="navLink"href="#LoadData" >Load Data</a>
+            <a id="addLink" class="navLink" href="#newBook">+ New book</a>
         </div>
     </nav>
+    <div class="page">
+        <div class="books">
+            <table id="book-list">
+                <thead>
+                    <tr class="titleTable">
+                        <th>Id</th>
+                        <th>Title<button id="btnSortTitle" class="btnSort">&#9650;</button></th>
+                        <th>Price<button id="btnSortPrice" class="btnSort">&#9650;</button></th>
+                        <th>Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Book items will be added here dynamically -->
+                </tbody>
+            </table>
+            <div class="backNext">
+                <button id="btnBackNext">Back</button>
+                <button id="btnBackNext">Next</button>
+            </div>
+            <!-- popup add book -->
+            <div class="addForm-popup" id="addForm">
+                <form class="form-container">
+                    <h1>+ New book</h1>
+                    <h2>------------</h2>
 
-    
+                    <label id ="labelForm" for="Id"><b>Id</b></label><br>
+                    <input id="newId" type="text" name="id" required><br>
+
+                    <label id ="labelForm" for="title"><b>Title</b></label><br>
+                    <input id="newTitle" type="text" name="title" required><br>
+
+                    <label id ="labelForm" for="price"><b>Price</b></label><br>
+                    <input id="newPrice" type="text" name="price" required><br>
+
+                    <label id ="labelForm" for="rating"><b>Rate</b></label><br>
+                    <input id="newRate" type="range" name="range" required min="0" max="10">
+                    <label id ="labelRate" for="rating"> <span id="rateRes"></span></label><br>
+
+
+                    <label id ="labelForm" for="url"><b>Cover Image URL</b></label><br>
+                    <input id="newUrl" type="text" name="urlImage" required><br>
+
+                    <button id="btnAdd" type="submit" class="btnAdd">Add</button>
+                </form>
+            </div>
+
+            <!-- popup update book -->
+            <div class="updateForm-popup" id="updateForm">
+                <form class="form-container">
+                    <h1>Update book</h1>
+                    <h2>------------</h2>
+
+                    <label for="Id"><b>Id: </b></label>
+                    <label id="updateId" for="IdNum"><b>Id</b></label><br>
+
+                    <label for="title"><b>Title</b></label><br>
+                    <input id="updateTitle" type="text" name="title" required><br>
+
+                    <label for="price"><b>Price</b></label><br>
+                    <input id="updatePrice" type="text" name="pride" required><br>
+
+                    <label for="url"><b>Cover Image URL</b></label><br>
+                    <input id="updateUrl" type="text" name="urlImage" required><br>
+
+                    <button id="btnSubmit" type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div id="book-details"></div>
+    </div>
+
 </body>
+
 </html>

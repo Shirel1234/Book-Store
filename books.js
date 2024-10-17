@@ -99,14 +99,19 @@ function showBookDetails(book) {
     const txtLabel = document.createElement('label');
     txtLabel.innerHTML = "Rate:";
     const btnLess = document.createElement('button');
-    btnLess.id = "btnRate";
+    btnLess.classList.add("btnRate");
+    btnLess.id = "btnLessRate";
     btnLess.innerHTML = "-";
     const txtNum = document.createElement('label');
     txtNum.id = "numRate";
     txtNum.innerHTML = book.rating;
     const btnAdd = document.createElement('button');
-    btnAdd.id = "btnRate";
+    btnAdd.classList.add("btnRate");
+    btnAdd.id = "btnAddRate";
     btnAdd.innerHTML = "+";
+    const btnSave=document.createElement('button');
+    btnSave.id="btnSaveRate"
+    btnSave.innerHTML="Save";
     divRate.appendChild(txtLabel);
     divRate.appendChild(btnLess);
     divRate.appendChild(txtNum);
@@ -114,12 +119,34 @@ function showBookDetails(book) {
 
     divPriceRate.appendChild(price);
     divPriceRate.appendChild(divRate);
+    divPriceRate.appendChild(btnSave)
 
     cell.appendChild(img);
     cell.appendChild(divPriceRate);
 
     divShow.appendChild(title);
     divShow.appendChild(cell);
+
+    const lessBtn =document.getElementById('btnLessRate');
+    lessBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            lessRate();
+        }
+    );
+
+    const addBtn =document.getElementById('btnAddRate');
+    addBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            addRate();
+        }
+    );
+
+    const saveBtn =document.getElementById('btnSaveRate');
+    saveBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            saveRate(book);
+        }
+    );
 
 }
 function openAddBook() {
@@ -205,4 +232,27 @@ function sortTable(index, type){
     rows.forEach(function (row) {
         table.tBodies[0].appendChild(row);
     });
+}
+function lessRate(){
+    const numRate=document.getElementById('numRate');
+    numRate.innerHTML=numRate.innerHTML-1;
+    if(numRate.innerHTML<0){
+        numRate.innerHTML=0;
+    }
+}
+function addRate(){
+    const numRate=document.getElementById('numRate');
+    numRate.innerHTML=Number(numRate.innerHTML)+1;
+    if(numRate.innerHTML>10){
+        numRate.innerHTML=10;
+    }
+}
+function saveRate(book){
+    let storedBasket = localStorage.getItem('booksData');
+    books = storedBasket ? JSON.parse(storedBasket) : [];
+    const num = document.getElementById('numRate').innerHTML;
+    const existItem = books.find(basketItem => basketItem.id == book.id);
+    existItem.rating= num;
+    localStorage.setItem('booksData', JSON.stringify(books));
+    renderBooks(books);
 }

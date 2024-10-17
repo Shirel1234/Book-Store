@@ -68,7 +68,7 @@ th, td {
     flex-direction: row;
 
 }
-#btnRate{
+.btnRate{
 width: 40px;
 height: 20px;
 background-color: #7E60BF ;
@@ -87,6 +87,14 @@ border: none;
 }
 .books{
     width: 1600px;
+}
+#btnSaveRate{
+    margin-top: 15px;
+    background-color: rgb(218, 218, 218);
+    border: none;
+}
+#btnSaveRate:hover{
+background-color: #7E60BF ;;
 }
 /*add form popup*/
 .addForm-popup{

@@ -163,7 +163,7 @@ function addBook() {
     let storedBasket = localStorage.getItem('booksData');
     books = storedBasket ? JSON.parse(storedBasket) : [];
     const newId = document.getElementById('newId').value;
-    const existItem = books.find(basketItem => basketItem.Id === newId);
+    const existItem = books.find(basketItem => basketItem.id == newId);
     if(existItem){
         alert("Error: There is book with the same id");
     }
